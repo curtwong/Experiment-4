@@ -1,0 +1,52 @@
+#include <iostream>                  
+#include <conio.h>
+#include <cmath>
+
+using namespace std; 
+                
+    int x, z, y;
+	char n, cont;
+	
+void print()
+{
+	cout << "**************************************CALCULATOR*************************************" << endl << endl;
+	cout << "*******Operands: 1-division 2-multiplication 3-addition 4-subtraction 5-modulus******" << endl << endl;
+	cout << "Enter Operator: ";
+	cin >> x;
+	cout << "Enter First Number:         ";
+	cin >> y;
+	cout << "Enter Second Number:        ";
+	cin >> z;
+	
+}
+int main ()
+{
+	do
+	{
+	print();
+	switch(x)
+	{
+		case 1:
+        	cout << "The Result Is:              " << y/z;
+			break;
+		case 2:
+			cout << "The Result Is:              " << y*z;
+			break;
+		case 3:
+			cout << "The Result Is:              " << y+z;
+			break;
+		case 4:
+			cout << "The Result Is:              " << y-z;
+			break;
+		case 5:
+			cout << "The Result Is:              " << y%z;
+			break;
+		default:
+			cout << "Invalid";
+	}
+	   cout << endl << "continue?: ";
+       cin >> cont; 
+       
+}while(cont=='y'||cont=='Y'); 
+  
+}

@@ -1,0 +1,55 @@
+#include <iostream> 
+#include <conio.h>
+
+using namespace std; 
+
+int array_size[100];
+int i, j, x, n;
+
+void print(int array_size[], int x) 
+{	
+    int i, j, m, n;
+   
+    for (i = 0; i < x - 1; i++)
+	{
+        m = i;
+    }
+	for (j = i + 1; j < x; j++)
+	{
+        if (array_size[j] < array_size[m])
+        m = j;
+ 		    n = array_size[i];
+        array_size[i] = array_size[m];
+        array_size[m] = n;
+   }
+}
+
+int main()
+{
+	cout << "Enter The Array Size: ";
+	cin >> x;
+	cout << "Input The " << x << " Elements: " << endl; 
+	
+	for (i = 0; i < x; ++i)
+{
+		cin >> array_size[i];
+}
+	for (i = 1; i < x; ++i)
+	{
+		for(j = 0; j < (x - i); ++j)
+			if (array_size[j] > array_size[j + 1])
+			
+			{
+				n = array_size[j];
+				array_size[j] = array_size[j + 1];
+				array_size[j + 1] = n;
+			}
+	}
+	
+	cout << endl << "The Sorted Product: " << endl;
+	for (i = 0; i < x; ++i)
+		cout << array_size[i] << ", ";
+	
+	getch();	
+	return 0;
+}
